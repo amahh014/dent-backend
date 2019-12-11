@@ -145,6 +145,8 @@ const remove = async function(req, res) {
 
 const all = function(req, res) {
   Appointment.find({})
+    .sort('date')
+    .sort('time')
     .populate('patient')
     .exec(function(err, docs) {
       if (err) {

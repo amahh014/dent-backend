@@ -10,7 +10,7 @@ const { PatientCtrl, AppointmentCtrl } = require('./controllers');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors()); 
 
 // @TODO: Попробовать сделать push-уведомления для стоматолога.
 
