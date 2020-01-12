@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 // const db = config.get('mongoURI');
 
-const MONGODB_URI = 'mongodb+srv://armagedon14:zaza6800@dentaldb-irefi.mongodb.net/test?retryWrites=true&w=majority'
+const MONGODB_URI = ''
 
 
 const connectDB = async () => {
