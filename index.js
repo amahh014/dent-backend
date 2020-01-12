@@ -1,10 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const connectDB = require('./core/db');
 
+connectDB();
 dotenv.config();
 
-const db = require('./core/db');
+const PORT = process.env.PORT || 6666;
 const { patientValidation, appointmentValidation } = require('./utils/validations');
 const { PatientCtrl, AppointmentCtrl } = require('./controllers');
 
@@ -25,7 +27,7 @@ app.post('/appointments', appointmentValidation.create, AppointmentCtrl.create);
 app.delete('/appointments/:id', AppointmentCtrl.remove);
 app.patch('/appointments/:id', appointmentValidation.update, AppointmentCtrl.update);
 
-app.listen(6666, function(err) {
+app.listen(PORT, function(err) {
   if (err) {
     return console.log(err);
   }
