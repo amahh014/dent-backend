@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator');
 const dayjs = require('dayjs');
 
-const ruLocale = require('dayjs/locale/ru');
+const kaLocale = require('dayjs/locale/ka');
 
 const { groupBy, reduce } = require('lodash');
 
@@ -165,7 +165,7 @@ const all = function(req, res) {
               ...result,
               {
                 title: dayjs(key)
-                  .locale(ruLocale)
+                  .locale(kaLocale)
                   .format('D MMMM'),
                 data: value,
               },
