@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "watch": "nodemon index.js"
+    "watch": "nodemon index.js",
+    "build": "[my-framework] build --output public"
   },
   "dependencies": {
     "axios": "^0.19.0",
